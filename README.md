@@ -4,7 +4,21 @@ Kickstart your web development with Elm.
 
 A collection of notes for web developers looking into moving to Elm.
 
+# Interaction, purity and signals
 
+Elm's signals make it easy to mark a function as pure. 
+
+```
+clockTypeSelectView : Signal.Address Update -> Clock -> Html.Html
+```
+
+denotes when a function does something impure - the fact that it takes a signal means there is probably some level of reactivity in the function
+
+```
+quarterlyView : Clock -> Html.Html
+```
+
+the lack of signal lets the developer know that that function involves no interaction, but may change based on changes within the `Clock` model.
 
 # Stylesheets
 
