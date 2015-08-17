@@ -61,3 +61,27 @@ Giving HTML elements in Elm is as easy as
 ```
 div [ class "clock-time" ] []
 ```
+
+
+# FAQ
+
+## Why does start-app give me an unexpected type error?
+
+If you get an error like this 
+```
+  -- TYPE MISMATCH ----------------------------------------------------- index.elm
+  
+  The 1st argument to function `start` has an unexpected type.
+  
+  14|   StartApp.start { model = model, view = view, update = update }
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  As I infer the type of values flowing through your program, I see a conflict
+  between these two types:
+
+    Int
+
+    String
+
+```
+
+this probably means that somewhere in your view or update methods, there is a type error. In order to get a more useful error message, add type signatiures to your functions, which will force it to check the types as you expect them to be.
