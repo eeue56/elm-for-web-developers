@@ -4,6 +4,10 @@ Kickstart your web development with Elm.
 
 A collection of notes for web developers looking into moving to Elm.
 
+# Where to start?
+
+The easiest place to start is through looking at some of the [examples on the elm-lang site](http://elm-lang.org/examples). I would suggest avoiding looking at any of the Games/Tasks/community examples. If you are looking to do HTML-things rather than canvas things, look at the [checkboxes](http://elm-lang.org/examples/checkboxes) example. It should introduce the [start-app](https://github.com/evancz/elm-architecture-tutorial/) structure that the majority of Elm programs follow. 
+
 # Interaction, purity and signals
 
 Elm's signals make it easy to mark a function as pure. 
