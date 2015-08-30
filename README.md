@@ -8,6 +8,10 @@ A collection of notes for web developers looking into moving to Elm.
 
 The easiest place to start is through looking at some of the [examples on the elm-lang site](http://elm-lang.org/examples). I would suggest avoiding looking at any of the Games/Tasks/community examples. If you are looking to do HTML-things rather than canvas things, look at the [checkboxes](http://elm-lang.org/examples/checkboxes) example. It should introduce the [start-app](https://github.com/evancz/elm-architecture-tutorial/) structure that the majority of Elm programs follow. 
 
+## From Angular
+
+If you're coming from Angular, the best comparision with startapp is directives. Each view function should be considered a directive, each with their own restricted scope. In order to send things outside of the scope, you must use Signals to send some data to be processed in the update function. The update function will take a model, an update object, and return a new model. Every time a model changes, the view is recreated with the bits that changed. startApp's view function gets given a [`Signal.Address`](http://package.elm-lang.org/packages/elm-lang/core/2.1.0/Signal#Mailbox). For basic sites, you don't need to worry about what this is other than it can allow you to write [interactive code](https://github.com/evancz/elm-todomvc/blob/master/Todo.elm#L202) by creating the objects to send to the view function.
+
 # Interaction, purity and signals
 
 Elm's signals make it easy to mark a function as pure. 
