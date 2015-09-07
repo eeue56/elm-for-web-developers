@@ -12,6 +12,10 @@ The easiest place to start is through looking at some of the [examples on the el
 
 If you're coming from Angular, the best comparision with startapp is directives. Each view function should be considered a directive, each with their own restricted scope. In order to send things outside of the scope, you must use Signals to send some data to be processed in the update function. The update function will take a model, an update object, and return a new model. Every time a model changes, the view is recreated with the bits that changed. startApp's view function gets given a [`Signal.Address`](http://package.elm-lang.org/packages/elm-lang/core/2.1.0/Signal#Mailbox). For basic sites, you don't need to worry about what this is other than it can allow you to write [interactive code](https://github.com/evancz/elm-todomvc/blob/master/Todo.elm#L202) by creating the objects to send to the view function.
 
+## From React
+
+If you're coming from React, there are already [documented cases](http://noredinktech.tumblr.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app) of people using React alongside Elm. [Relm](https://github.com/eeue56/relm) aims to be a library for simplifying the usage of React and Elm as a couple, though at the moment it is mainly just examples.
+
 # Interaction, purity and signals
 
 Elm's signals make it easy to mark a function as pure. 
