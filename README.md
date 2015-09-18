@@ -16,7 +16,7 @@ If you're coming from Angular, the best comparision with startapp is directives.
 
 If you're coming from React, there are already [documented cases](http://noredinktech.tumblr.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app) of people using React alongside Elm. [Relm](https://github.com/eeue56/relm) aims to be a library for simplifying the usage of React and Elm as a couple, though at the moment it is mainly just examples.
 
-# Interaction, purity and signals
+# Interaction and signals
 
 Elm's signals make it easy to mark a function as pure. 
 
@@ -24,7 +24,7 @@ Elm's signals make it easy to mark a function as pure.
 clockTypeSelectView : Signal.Address Update -> Clock -> Html.Html
 ```
 
-denotes when a function does something impure - the fact that it takes a signal means there is probably some level of reactivity in the function. 
+denotes when a function does something based on an input that may change without the developer telling it to - the fact that it takes a signal means there is probably some level of reactivity in the function. 
 
 ```
 quarterlyView : Clock -> Html.Html
