@@ -20,7 +20,7 @@ If you're coming from React, there are already [documented cases](http://noredin
 
 # Interaction and signals
 
-Elm's signals make it easy to mark a function as pure. 
+Elm makes it easy to notify when an interaction happens in your views.
 
 ```
 clockTypeSelectView : Signal.Address Update -> Clock -> Html.Html
