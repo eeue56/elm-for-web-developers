@@ -18,6 +18,7 @@ If you're coming from Angular, the best comparision with startapp is directives.
 
 If you're coming from React, there are already [documented cases](http://noredinktech.tumblr.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app) of people using React alongside Elm. [Relm](https://github.com/eeue56/relm) aims to be a library for simplifying the usage of React and Elm as a couple, though at the moment it is mainly just examples.
 
+
 # Interaction and signals
 
 Elm makes it easy to notify when an interaction happens in your views.
@@ -70,7 +71,7 @@ A full working example can be found [here](https://github.com/eeue56/broken-cloc
 
 ## Using classes in Elm
 
-Giving HTML elements in Elm is as easy as
+Giving HTML elements classes in Elm is as easy as
 
 ```
 div [ class "clock-time" ] []
@@ -121,3 +122,25 @@ If you get an error like this
 ```
 
 this probably means that somewhere in your view or update methods, there is a type error. In order to get a more useful error message, add type signatiures to your functions, which will force it to check the types as you expect them to be.
+
+
+## How do I do HTML?
+
+If you're trying to use HTML, then you probably want [elm-html](http://package.elm-lang.org/packages/evancz/elm-html/4.0.1).
+
+## Can I enter HTML as a string?
+
+Not with elm-html by default. You could hack up a solution like so
+
+```
+import Html exposing (div)
+import Html.Attributes exposing (property, attribute)
+import Json.Encode exposing (string)
+
+main = 
+  div [ property  "innerHTML" <| string "<div>hello</div>"  ] []
+```
+
+but that's not a good idea. Read up on the elm-html and understand how virtual-doms work and why they're a good idea. 
+
+Footnote - I have an example [here](https://github.com/eeue56/relm/tree/master/proposal/basic-html) of abusing Native to hack out some HTML from a string.
