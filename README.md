@@ -38,7 +38,7 @@ the lack of signal lets the developer know that that function involves no intera
 
 ## Linking
 
-In order to use stylesheets in Elm, you must create a [custom index.html(https://github.com/eeue56/broken-clock/blob/master/index.html) page. In there, you can link in any stylesheets you want. 
+In order to use stylesheets in Elm, you must create a [custom index.html](https://github.com/eeue56/broken-clock/blob/master/index.html) page. In there, you can link in any stylesheets you want. 
 
 E.G:
 ```
