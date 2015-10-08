@@ -22,6 +22,13 @@ If you're coming from Angular, the best comparision with startapp is directives.
 If you're coming from React, there are already [documented cases](http://noredinktech.tumblr.com/post/126978281075/walkthrough-introducing-elm-to-a-js-web-app) of people using React alongside Elm. [Relm](https://github.com/eeue56/relm) aims to be a library for simplifying the usage of React and Elm as a couple, though at the moment it is mainly just examples.
 
 
+## Integrating Elm into your existing applications
+
+`Elm.worker(Elm.ModuleName)` should be your best friend for integrating Elm into existing applications. It allows you to use ports and use Elm for controlling your applications without needing to have any of the views in Elm itself. I've used it for managing state in my React apps between the different components. The `send` function allows your child components to trigger `subscribe` functions in your parent scope, keeping your data flow in a top-down structure as promoted by things like Flux.
+
+`Elm.embed(Elm.ModuleName)` is perfect for when you want to do some of your view in Elm, but the rest without. Note: there are some bugs with the core libraries when you use embed, for things like `touch` or `mouse` actions. 
+
+
 # Interaction and signals
 
 Elm makes it easy to notify when an interaction happens in your views.
