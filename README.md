@@ -28,6 +28,7 @@ If you're coming from React, there are already [documented cases](http://noredin
 
 `Elm.embed(Elm.ModuleName)` is perfect for when you want to do some of your view in Elm, but the rest without. Note: there are some bugs with the core libraries when you use embed, for things like `touch` or `mouse` actions. 
 
+With either of these, you can use ports for allowing communication between your Javascript and your Elm applications. A typical use case of this might be using existing AJAX requests without moving all the HTTP requests to Elm.
 
 # Interaction and signals
 
