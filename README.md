@@ -155,3 +155,8 @@ main =
 but that's not a good idea. Read up on the elm-html and understand how virtual-doms work and why they're a good idea. 
 
 Footnote - I have an example [here](https://github.com/eeue56/relm/tree/master/proposal/basic-html) of abusing Native to hack out some HTML from a string.
+
+
+## Do I always have to manually create an index.html?
+
+No! If you run `elm-make <filename> --output index.html`, it will create both elm.js and a version of it in the the index.html file.
