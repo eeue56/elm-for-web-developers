@@ -53,7 +53,7 @@ the lack of signal lets the developer know that that function involves no intera
 In order to use stylesheets in Elm, you must create a [custom index.html](https://github.com/eeue56/broken-clock/blob/master/index.html) page. In there, you can link in any stylesheets you want. 
 
 E.G:
-```
+```html
 <link rel="stylesheet" href="styles.css">
 ```
 
@@ -66,13 +66,13 @@ elm-make <main-filename>
 
 In index.html: 
 
-```
+```html
 <script type="text/javascript" src="elm.js"></script>
 ```
 
 You must also then bootstrap your Elm application by putting in a call to Elm.fullscreen:
 
-```
+```javascript
 <script type="text/javascript">
   Elm.fullscreen(Elm.ModuleName);
 </script>
@@ -84,13 +84,13 @@ A full working example can be found [here](https://github.com/eeue56/broken-cloc
 
 Giving HTML elements classes in Elm is as easy as
 
-```
+```elm
 div [ class "clock-time" ] []
 ```
 
 with the CSS
 
-```
+```elm
 .clock-time {
     color : red;
 }
@@ -116,7 +116,7 @@ The less levels of functions involved, the better. If you find yourself nesting 
 ## Why does start-app give me an unexpected type error?
 
 If you get an error like this 
-```
+```elm
   -- TYPE MISMATCH ----------------------------------------------------- index.elm
   
   The 1st argument to function `start` has an unexpected type.
@@ -132,7 +132,7 @@ If you get an error like this
 
 ```
 
-this probably means that somewhere in your view or update methods, there is a type error. In order to get a more useful error message, add type signatiures to your functions, which will force it to check the types as you expect them to be.
+this probably means that somewhere in your view or update methods, there is a type error. In order to get a more useful error message, add type signatures to your functions, which will force it to check the types as you expect them to be.
 
 
 ## How do I do HTML?
@@ -143,7 +143,7 @@ If you're trying to use HTML, then you probably want [elm-html](http://package.e
 
 Not with elm-html by default. You could hack up a solution like so
 
-```
+```elm
 import Html exposing (div)
 import Html.Attributes exposing (property, attribute)
 import Json.Encode exposing (string)
