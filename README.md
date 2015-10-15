@@ -34,13 +34,13 @@ With either of these, you can use ports for allowing communication between your 
 
 Elm makes it easy to notify when an interaction happens in your views.
 
-```
+```elm
 clockTypeSelectView : Signal.Address Update -> Clock -> Html.Html
 ```
 
 denotes when a function does something based on an input that may change without the developer telling it to - the fact that it takes a signal means there is probably some level of reactivity in the function. 
 
-```
+```elm
 quarterlyView : Clock -> Html.Html
 ```
 
