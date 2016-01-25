@@ -61,7 +61,7 @@ You must include "elm.js" in there - this is created when you run elm-make, and 
 
 In your terminal:
 ```
-elm-make <main-filename>
+elm-make <main-filename> --output elm.js
 ```
 
 In index.html: 
